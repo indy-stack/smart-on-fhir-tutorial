@@ -15,11 +15,9 @@
                     type: 'Encounter', //Encounter Encounter-3type: LL3016-4
                     query: {
                       code: {
-                        /*$or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
+                        or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
                               'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
-                              'http://loinc.org|2089-1', 'http://loinc.org|55284-4']*/
-                        
-                        $or: ['http://loinc.org|80412-0']
+                              'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
                         
                       }
                     }
@@ -30,7 +28,7 @@
         $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
-          var test = patient.serviceProvider;
+          var test = patient.serviceProvider,name;
           
 
           var fname = '';

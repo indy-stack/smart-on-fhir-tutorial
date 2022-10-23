@@ -54,7 +54,7 @@
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
           p.test = test;
-          
+          console.log(p.test);
          
 
           if (typeof systolicbp != 'undefined')  {
